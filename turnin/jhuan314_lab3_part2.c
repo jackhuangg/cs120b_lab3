@@ -25,13 +25,11 @@ int main(void) {
 
     unsigned char tmpA;
     unsigned char tmpB;
-    unsigned char tmpC;
     /* Insert your solution below */
     while (1) {
 	tmpA = 0;
 	tmpB = 0;
 	tmpA = PINA & 0x0F;
-	tmpC = PINA >> 4;
 	if(tmpA==0){
 		tmpB+=64;
 	}
@@ -55,9 +53,6 @@ int main(void) {
 	
 	}
 	else{}
-	if(tmpC==3){
-		tmpB+=128;
-	}
 	PORTC=tmpB;	
     }
     return 1;
